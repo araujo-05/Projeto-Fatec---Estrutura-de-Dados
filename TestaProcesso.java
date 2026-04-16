@@ -1,8 +1,7 @@
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Scanner;
-import java.lang.NullPointerException;
 import java.util.InputMismatchException;
+import java.util.Scanner;
 
 public class TestaProcesso {
     public static void main(String[] args) {
@@ -29,6 +28,11 @@ public class TestaProcesso {
 
                         System.out.print("Digite a prioridade do serviço(1 - Baixa | 2 - Normal | 3 - Urgente): ");
                         prioridade = sc.nextInt();
+
+                        while(!(prioridade >=1 && prioridade <=3)){
+                            System.out.print("Valor Inválido, digite o valor correto(1 - Baixa | 2 - Normal | 3 - Urgente): ");
+                            prioridade = sc.nextInt();
+                        }
 
                         Calendar cal = Calendar.getInstance();
                         SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy HH:mm");
