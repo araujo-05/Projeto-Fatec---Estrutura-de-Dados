@@ -9,12 +9,13 @@ public class Processo {
     private static int contador = 1;
     
     
-    public Processo(String solicitante, String tipoServico, int prioridade) {
+    public Processo(String solicitante, String tipoServico, int prioridade, String dataHora) {
     	
     	this.protocolo = contador++;
     	this.solicitante = solicitante;
     	this.tipoServico = tipoServico;
     	this.prioridade = prioridade;
+        this.dataHora = dataHora;
     }
     
     public int getProtocolo() {
@@ -77,7 +78,7 @@ public class Processo {
     	
     	String protocoloFormat = String.format("%03d", protocolo);
     	
-    	return "[#"+protocoloFormat+"] "+solicitante+" | "+tipoServico+" | "+getDescricaoPrioridade()+" | "+dataHora;
+    	return "[#"+protocoloFormat+"] "+solicitante+" | "+tipoServico+" | "+getDescricaoPrioridade()+" | "+dataHora+"\n";
     	
     }
     
