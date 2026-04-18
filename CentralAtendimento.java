@@ -1,17 +1,17 @@
 // Implementando a central de atendimento
 public class CentralAtendimento {
 
-    private PilhaProcesso pendentes;
-    private PilhaProcesso historico;
+    private PilhaPrioridade pendentes;
+    private PilhaPrioridade historico;
 
     public CentralAtendimento() {
-        pendentes = new PilhaProcesso();
-        historico = new PilhaProcesso();
+        pendentes = new PilhaPrioridade();
+        historico = new PilhaPrioridade();
     }
 
     public void abrirProcesso(Processo p) {
         pendentes.push(p);
-        historico = new PilhaProcesso(); 
+        historico = new PilhaPrioridade(); 
     }
 
     public Processo atenderProximo() {
@@ -26,10 +26,10 @@ public class CentralAtendimento {
     }
 
     public void listarPendentes() {
-        pendentes.imprimir();
+        pendentes.listar();
     }
 
     public void listarHistorico() {
-        historico.imprimir();
+        historico.listar();
     }
 }

@@ -37,11 +37,11 @@ public class PilhaPrioridade {
     }
 
     public void listar() {
-    System.out.println("=== URGENTE ===");
+    System.out.println("\n=== URGENTE ===");
     urgente.imprimir();
-    System.out.println("=== NORMAL ===");
+    System.out.println("\n=== NORMAL ===");
     normal.imprimir();
-    System.out.println("=== BAIXA ===");
+    System.out.println("\n=== BAIXA ===");
     baixa.imprimir();
     }
 

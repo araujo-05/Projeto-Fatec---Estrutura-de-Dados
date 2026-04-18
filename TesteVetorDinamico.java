@@ -3,7 +3,7 @@ import java.util.Calendar;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class TestaProcesso {
+public class TesteVetorDinamico {
     public static void main(String[] args) {
         VetorDinamico vetorProcessos = new VetorDinamico();
         Scanner sc = new Scanner(System.in);
